@@ -1,0 +1,119 @@
+# Ignore environment variable files
+.env
+
+# Ignore user-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# MonoDevelop/Xamarin Studio
+*.userprefs
+
+# Ignore build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio cache/options directory
+.vs/
+
+# Auto-generated files
+*.dll
+*.exe
+*.pdb
+*.meta
+*.tmp
+*.tmp_proj
+*.log
+*.tlog
+*.ipch
+*.cachefile
+
+# NuGet-related files
+*.nupkg
+*.snupkg
+*.nuget.dgspec.json
+*.nuget.cache
+*.assets.json
+packages/
+
+# Ignore the solution’s `bin` and `obj` directories for all projects
+**/bin/
+**/obj/
+
+# Rider IDE config
+.idea/
+*.sln.iml
+
+# Mac OS files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows files
+Thumbs.db
+ehthumbs.db
+$RECYCLE.BIN/
+Desktop.ini
+
+# Node.js dependencies
+node_modules/
+
+# Visual Studio code files
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# TFS and Azure
+$tf/
+PublishScripts/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Test results
+[Tt]est[Rr]esult*/
+*.coverage
+*.coveragexml
+*.trx
+
+# Build artifacts
+artifacts/
+AppPackages/
+BundleArtifacts/
+publish/
+
+# Ignore local history in Visual Studio Code and Rider
+.localhistory/
+.history/
+.vshistory/
+
+# Ignore temporary files created by the Fakes framework in Visual Studio
+FakesAssemblies/
+
+# JetBrains Rider IDE
+.idea/
+
+# Other general files
+*.bak
+*.log
+*.pidb
+*.plg
+*.userprefs
+*.obj
+
+# Including .cs, .csproj, and .sln files (source code and project configuration)
+!*.cs
+!*.csproj
+!*.sln

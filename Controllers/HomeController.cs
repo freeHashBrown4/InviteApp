@@ -1,31 +1,29 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using InviteApp.Models;
+using PartyInvites.Models;
 
-namespace InviteApp.Controllers;
+namespace PartyInvites.Controllers {
+    public class HomeController : Controller {
+        
+        public IActionResult Index() {
+            return View();
+        }
 
-public class HomeController : Controller
-{
-    private readonly ILogger<HomeController> _logger;
+        [HttpGet]
+        public ViewResult RsvpForm() {
+            return View();
+        }
 
-    public HomeController(ILogger<HomeController> logger)
-    {
-        _logger = logger;
-    }
+        [HttpPost]
+        public ViewResult RsvpForm(GuestResponse guestResponse){
+            Repository.AddResponse(guestResponse);
+            return View("Thanks", guestResponse);
+        }
 
-    public IActionResult Index()
-    {
-        return View();
-    }
+        public ViewResult ListResponses(){
+            return View(Repository.Responses
+            .Where(r => r.WillAttend == true))
+        }
+        
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
-
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 }
